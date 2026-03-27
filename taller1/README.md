@@ -1,17 +1,30 @@
-# taller1
+# Taller 1 — StatefulWidget y setState() en Flutter
 
-A new Flutter project.
+## Descripción
+Pantalla básica en Flutter que demuestra el uso de StatefulWidget y setState()
+para actualizar la UI dinámicamente. Incluye cambio de título en AppBar,
+SnackBar, imágenes con Image.network() e Image.asset(), Stack y ListView.
 
-## Getting Started
+## Estudiante
+- **Nombre completo:** Juan Esteban Tobon Diaz
+- **Código:** 230222027
 
-This project is a starting point for a Flutter application.
+## Pasos para ejecutar
 
-A few resources to get you started if this is your first Flutter project:
+1. Clona el repositorio:
+   git clone https://github.com/TOBON2109/resumidor-clases-ia.git
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+2. Entra al proyecto:
+   cd resumidor-clases-ia/taller1
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Instala dependencias:
+   flutter pub get
+
+4. Ejecuta la app:
+   flutter run
+
+## Capturas
+![alt text](image-1.png)
+![alt text](image-2.png)
+## Rama
+feature/taller1
