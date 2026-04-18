@@ -19,40 +19,33 @@ class CustomDrawer extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Inicio'),
-            onTap: () {
-              context.go('/');
-              Navigator.pop(context);
-            },
+          _item(context, Icons.home, 'Inicio', '/'),
+          _item(context, Icons.upload_file, 'Subir archivo', '/upload'),
+          _item(context, Icons.summarize, 'Resumen', '/summary'),
+          _item(context, Icons.person, 'Perfil', '/profile'),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, top: 8, bottom: 4),
+            child: Text('Segundo Plano',
+                style: TextStyle(color: Colors.grey, fontSize: 12)),
           ),
-          ListTile(
-            leading: const Icon(Icons.upload_file),
-            title: const Text('Subir archivo'),
-            onTap: () {
-              context.push('/upload');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.summarize),
-            title: const Text('Resumen'),
-            onTap: () {
-              context.push('/summary');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text('Perfil'),
-            onTap: () {
-              context.replace('/profile');
-              Navigator.pop(context);
-            },
-          ),
+          _item(context, Icons.cloud_sync, 'Asincronía', '/async'),
+          _item(context, Icons.timer, 'Cronómetro', '/timer'),
+          _item(context, Icons.memory, 'Isolate', '/isolate'),
         ],
       ),
+    );
+  }
+
+  ListTile _item(
+      BuildContext context, IconData icon, String label, String ruta) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(label),
+      onTap: () {
+        context.go(ruta);
+        Navigator.pop(context);
+      },
     );
   }
 }
