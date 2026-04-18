@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'AppResum',
       theme: AppTheme.lightTheme,
-      routerConfig: appRouter, // Usa el router centralizado
+      routerConfig: appRouter,
     );
   }
 }
